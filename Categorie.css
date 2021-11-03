@@ -144,7 +144,7 @@ section{
 .items .box {
     position: relative;
     border-radius: 20px;
-    /* background: rgba(0, 0, 0, 0.7); */
+    background: rgba(0, 0, 0, 0.7);
     box-shadow: 0px 10px 40px rgb(0 0 0 / 25%) ;
     border-radius: 50px;
     width: 150px;
@@ -157,7 +157,7 @@ section{
     align-content: center;
 }
 .items .box:hover{
-    background: rgba(0, 0, 0, 0.7); */
+    background: transparent; 
 }
 
 .items .box .info{
@@ -211,8 +211,8 @@ section{
     position: absolute;
     width: 40px;
     height: 41px;
-    bottom: -21px;
-    right: 55px;
+    bottom: 12px;
+    right: 14px;
     background: #E5CBA4;
     border-radius: 24px 10px 37px 15px;
 }
