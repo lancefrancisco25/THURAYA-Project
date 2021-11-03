@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .circleOutline{
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	border-radius: 100%;
+	border: 1px solid;
+	z-index: 1;
+}
+
+.rotatingCont{
+	width: 400px;
+	height: 400px;
+	/*background: red;*/
+	border-radius: 50px;
+	position: absolute;
+	top: -50%;
+	transform: translateY(-90%)
+}
+/*WHEN THE JAVASCRIPT ADDED THE CLASSES, IT WILL START THE ANIMATION WITH THE -WEBKIT ANIMATION*/
+.spinCont{
+	-webkit-animation: rotating 1s linear;
+	animation-fill-mode: forwards;
+
+}
+
+.outerSpinCont{
+		-webkit-animation: rotatingC 1s linear ;
+	animation-fill-mode: forwards;
+
+
+}
+
+/*STOP ANIMATION CLASS*/
+.pauseanimation{
+  animation-play-state: paused;
+}
+
+.thecontent{
+	width: 100px;
+	height: 100px;
+	background-image: url('https://www.hqdiesel.net/gallery/albums/userpics/10004/normal_hqdiesel0969.jpg');
+	background-size: contain;
+	border-radius: 100%;
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	transform: translate(-100%, -50%);
+}
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(100deg);
+    }
+}
+
+
+@-webkit-keyframes rotatingC {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(-100deg);
+    }
+}
+  </style>
+</head>
+<body>
+  <div class="circleOutline"></div>
+  <div class="rotatingCont"><div class="thecontent"></div></div>
+  <br><br><br><br>
+  <div style="position: absolute; bottom: 0">
+  <button id="triggerBut">click trigger</button>
+  <button id="stopBut">Stop Animation</button>	
+  </div>
+  <script>
+    var timer;
+
+//START ANIMATION
+document.getElementById('triggerBut').onclick = function(){
+	var e = document.querySelector('.rotatingCont'), a = document.querySelector('.thecontent')
+	e.classList.remove('pauseanimation')
+	a.classList.remove('pauseanimation')
+
+	e.classList.remove('spinCont')
+	a.classList.remove('outerSpinCont')
+	setTimeout(function(){
+			e.classList.add('spinCont')
+	a.classList.add('outerSpinCont')
+	},1)
+	//SET TIMEOUT IS A TIMER SO WHEN IT REACHES 1 SECOND, IT WILL REMOVE THE CLASS SO YOU CAN REPEAT IT AGAIN
+
+}
+
+//PAUSE ANIMATIONS
+document.getElementById('stopBut').onclick = function(){
+	var e = document.querySelector('.rotatingCont'), a = document.querySelector('.thecontent')
+	e.classList.add('pauseanimation')
+	a.classList.add('pauseanimation')
+
+	clearTimeout(timer)
+}
+  </script>
+  
+</body>
+</html>

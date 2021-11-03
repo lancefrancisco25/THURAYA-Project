@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+} 
+
+html{
+    scroll-behavior: smooth;|
+}
+
+body{
+    background: url(images/thuraya.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    background-position: center;
+    overflow-x: hidden;
+    height: 100%;
+    border-radius: 30px;
+}
+
+section{
+    position: relative;
+    margin: auto;
+    width: 100vw;
+    height: 100%;
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/* header */
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px 0 20px;
+}
+
+.title .logo img{
+    max-width: 80px;
+}
+.title .nav_img img{
+    height: 40px;
+    width: 40px;
+    z-index: 1;
+    margin-right: 20px;
+} 
+
+/* End of header */
+
+.banner .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+}
+.banner .content h1{
+    font-size: 4rem;
+    line-height: 1em;
+}
+
+.banner .content .btn{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    background: #E5CBA4;
+    color: #000;
+    height: 50px;
+    width: 200px;
+    text-decoration:none ;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius:20px ;
+    transition: 1s;
+
+}
+.banner .content .btn:hover{
+    border-top-left-radius:20px ;
+    border-top-right-radius:0px ;
+    border-bottom-left-radius:0px ;
+    border-bottom-right-radius:20px ;
+    letter-spacing: 2px;
+}
+.banner .content ul{
+    display: flex;
+    margin-top: 150px;
+    margin-bottom: 70px;
+}
+
+.banner .content ul li{
+    list-style: none;
+    margin-right: 20px;
+}
+
+.banner .content ul li a{
+    height: 40px;
+    width: 40px;
+    padding:  15px;
+    backdrop-filter: blur(10px);
+    background-color: #E5CBA4;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 30%;
+    justify-content: center;
+}
+
+.banner .content ul li a img{
+    height: 30px;
+    width: 30px;
+    transition: 1s;
+    margin-top: 0rem;
+}
+
+.banner .content ul li a:hover img{
+    transform: translateY(-15px);
+}
+
+.banner .ban_img img{
+    position: relative;
+    width: 40rem;
+    height: auto;
+    transition: 1s;
+}
+
+/* Item List */
+
+.items{
+    width: 100%;
+    height: 500px;  
+}
+
+.items .box {
+    position: relative;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 40px rgb(0 0 0 / 25%) ;
+    border-radius: 50px;
+    width: 150px;
+    height: 200px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.items .box .info{
+    text-align: center;
+}
+
+.items .box h5{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #E5CBA4;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.items .box h6{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 20px;
+    color: #E7D7C0;
+}
+
+.items .box p{
+    position: relative;
+    left:-23px;
+    bottom: -15px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    color: #E7D7C0;
+}
+
+.items .box .imgBx img{
+    margin-top: -4rem;
+    height: auto;
+    max-width: 180px;
+}
+
+.items .box .like a{
+    position: absolute;
+    width: 40px;
+    height: 41px;
+    bottom: 12px;
+    right: 14px;
+    background: #E5CBA4;
+    border-radius: 24px 10px 37px 15px;
+}
+
+.items .box .like a:hover{
+    background:#D1A773 ;
+}
+
+.items .box .like img{
+    position: relative;
+    margin-top: 12px;
+    margin-left: 12px;
+    width: 40%;
+}
+
+
+
+
+@media(max-width:499px){
+    .banner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+    }
+    /* Rotating animation style */
+                            
+    .rotatingCont{
+        width: 200px;
+        height: 200px;
+        border-radius: 50px;
+        position: absolute;
+        top: -3%;
+        left: -18px;
+        transform: translateY(-50%)
+    }
+                            /* .rotatingCont{
+                                width: 300px;
+                                height: 400px;
+                                border-radius: 50px;
+                                position: absolute;
+                                top: -23%;
+                                left: -12%;
+                                transform: translateY(-90%)
+                            } */
+
+                            /*WHEN THE JAVASCRIPT ADDED THE CLASSES, IT WILL START THE ANIMATION WITH THE -WEBKIT ANIMATION*/
+                                .spinCont{
+                                    -webkit-animation: rotating 1s linear;
+                                    animation-fill-mode: forwards;
+
+                                }
+
+                                .outerSpinCont{
+                                        -webkit-animation: rotatingC 1s linear ;
+                                    animation-fill-mode: forwards;
+
+
+                                }
+
+                            /*STOP ANIMATION CLASS*/
+                                .pauseanimation{
+                                animation-play-state: paused;
+                                }
+
+                                .thecontent{
+                                    width: 200px;
+                                    height: 200px;
+                                    border-radius: 100%;
+                                    position: absolute;
+                                    top: -15%;
+                                    left: 100%;
+                                    transform: translate(-100%, -50%);
+                                }
+                                .thecontent img{
+                                    max-width: 200px;
+                                }
+
+                            @-webkit-keyframes rotating {
+                                from{
+                                    -webkit-transform: rotate(0deg);
+                                }
+                                to{
+                                    -webkit-transform: rotate(100deg);
+                                }
+                            }
+
+
+                            @-webkit-keyframes rotatingC {
+                                from{
+                                    -webkit-transform: rotate(0deg);
+                                }
+                                to{
+                                    -webkit-transform: rotate(-100deg);
+                                }
+                            }
+
+     /* End of rotating animation  */
+
+/* Text animation  */
+    .container{
+        /* position: relative;
+        top:50px;
+        left:100px; */
+        text-align: center;
+    }
+    .animation{
+        z-index: 13;
+        display: inline-block;
+        animation: fadeIn 1.5s forwards ;
+        opacity: 0;
+        transition-timing-function : cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+
+    .first {
+        font-size: 2.5rem;
+        Letter-spacing: 1px;
+        font-weight: 900;
+        font-family: 'Noto Serif Display', serif;
+        display: inline-block;
+        animation: firstspan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        z-index: 1;
+        position : relative;
+        top:-45px;
+    }
+
+    .slide{   
+        display: inline-flex;
+        overflow: hidden;
+    }
+
+    .second{   
+        
+        font-weight: lighter;
+        color: #E5CBA4; 
+        font-weight:lighter;
+        Z-index: 1;
+        display: inline-block;
+        animation : secondspan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+
+    span :before{
+            content: '';
+            animation: animate infinite 12s;
+    }
+
+        
+
+        @keyframes animate{
+            0%{
+                content: 'FOOD';
+            }
+            20%{
+                content: 'COFEE';
+            }
+            40%{
+                content: 'TEA';
+            }
+            60%{
+                content: 'JUICE';
+            }
+            80%{
+                content: 'CAKE';
+            }
+        }
+
+        @keyframes fadeIn{
+            0%{
+                opacity: 0;
+                transform : scale(1) ;
+            }
+            50%{
+                opacity: 1;
+                transform : scale(1.1) ;
+            }
+            100%{
+                opacity: 1;
+                transform: scale(1)
+            }
+        }
+
+        @keyframes firstspan{
+            0%{
+                transform: translateX(50%);
+            }
+            60%{
+                transform: translateX(50%);
+            }
+            100%{
+                transform: translateX(0%);
+            }
+        }
+
+        @keyframes secondspan{
+            0%{
+                transform: translateX(-100%);
+            }
+            60%{
+                transform: translateX(-100%);
+            }
+            100%{
+                transform: translateX(0%);
+            }
+        }
+/* End of Text animation  */
+
+}
+
+@media  (min-width: 500px){
+
+
+/* Rotating animation style */
+
+.rotatingCont{
+    width: 400px;
+    height: 400px;
+    border-radius: 50px;
+    position: absolute;
+    top: -50%;
+    transform: translateY(-90%)
+}
+
+/*WHEN THE JAVASCRIPT ADDED THE CLASSES, IT WILL START THE ANIMATION WITH THE -WEBKIT ANIMATION*/
+    .spinCont{
+        -webkit-animation: rotating 1s linear;
+        animation-fill-mode: forwards;
+
+    }
+
+    .outerSpinCont{
+            -webkit-animation: rotatingC 1s linear ;
+        animation-fill-mode: forwards;
+
+
+    }
+
+/*STOP ANIMATION CLASS*/
+    .pauseanimation{
+    animation-play-state: paused;
+    }
+
+    .thecontent{
+        max-width: 200px;
+        max-height: 200px;
+        border-radius: 100%;
+        position: absolute;
+        top: 20%;
+        left: 119%;
+        transform: translate(-100%, -50%);
+    }
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(100deg);
+    }
+}
+
+
+@-webkit-keyframes rotatingC {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(-100deg);
+    }
+}
+
+/* End of rotating animation  */
+
+/* Text animation  */
+.container{
+    position: relative;
+    top:50px;
+    left:100px;
+    text-align: center;
+}
+.animation{
+    z-index: 13;
+    text-transform: uppercase;
+    font-size: 4rem;
+    /* Letter-spacing: 1px; */
+    color: #000000;
+    display: inline-block;
+    animation: fadeIn 1.5s forwards ;
+    opacity: 0;
+    transition-timing-function : cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.first{
+    display: inline-block;
+    font-family: 'Noto Serif Display', serif;
+    animation: firstspan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    z-index: 1;
+    position : relative;
+    top:-45px;
+    font-weight: 900;
+}
+
+.slide{   
+    display: inline-flex;
+    overflow: hidden;
+}
+
+.second{   
+    color: #E5CBA4; 
+    font-weight: lighter;
+    Z-index: 1;
+    display: inline-block;
+    animation : secondspan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+span :before{
+        content: '';
+        animation: animate infinite 12s;
+}
+
+    
+
+    @keyframes animate{
+        0%{
+            content: 'FOOD';
+        }
+        20%{
+            content: 'COFEE';
+        }
+        40%{
+            content: 'TEA';
+        }
+        60%{
+            content: 'JUICE';
+        }
+        80%{
+            content: 'CAKE';
+        }
+    }
+
+    @keyframes fadeIn{
+        0%{
+            opacity: 0;
+            transform : scale(1) ;
+        }
+        50%{
+            opacity: 1;
+            transform : scale(1.1) ;
+        }
+        100%{
+            opacity: 1;
+            transform: scale(1)
+        }
+    }
+
+    @keyframes firstspan{
+        0%{
+            transform: translateX(50%);
+        }
+        60%{
+            transform: translateX(50%);
+        }
+        100%{
+            transform: translateX(0%);
+        }
+    }
+
+    @keyframes secondspan{
+        0%{
+            transform: translateX(-100%);
+        }
+        60%{
+            transform: translateX(-100%);
+        }
+        100%{
+            transform: translateX(0%);
+        }
+    }
+/* End of Text animation  */
+
+
+
+
+}
