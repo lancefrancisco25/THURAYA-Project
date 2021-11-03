@@ -162,8 +162,8 @@ section{
 
 .items .box .info{
     text-align: center;
-    position: fixed;
-    bottom:100px;
+    position: absolute;
+    bottom:23px;
 
 }
 
@@ -200,7 +200,7 @@ section{
 }
 
 .items .box .imgBx img{
-    margin-top: -4rem;
+    margin-top: -163px;
     height: auto;
     z-index: 1;
     /* 
