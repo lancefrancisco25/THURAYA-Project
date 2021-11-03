@@ -230,8 +230,7 @@ section{
         align-items: center;
         margin-top: 60px;
     }
-    /* Rotating animation style */
-                            
+/* Rotating animation style */                  
     .rotatingCont{
         width: 200px;
         height: 200px;
@@ -241,47 +240,35 @@ section{
         left: -18px;
         transform: translateY(-50%)
     }
-                            /* .rotatingCont{
-                                width: 300px;
-                                height: 400px;
-                                border-radius: 50px;
-                                position: absolute;
-                                top: -23%;
-                                left: -12%;
-                                transform: translateY(-90%)
-                            } */
+    /*WHEN THE JAVASCRIPT ADDED THE CLASSES, IT WILL START THE ANIMATION WITH THE -WEBKIT ANIMATION*/
+        .spinCont{
+            -webkit-animation: rotating 1s linear;
+            animation-fill-mode: forwards;
+        }
 
-                            /*WHEN THE JAVASCRIPT ADDED THE CLASSES, IT WILL START THE ANIMATION WITH THE -WEBKIT ANIMATION*/
-                                .spinCont{
-                                    -webkit-animation: rotating 1s linear;
-                                    animation-fill-mode: forwards;
+        .outerSpinCont{
+            -webkit-animation: rotatingC 1s linear ;
+            animation-fill-mode: forwards;
 
-                                }
+        }
 
-                                .outerSpinCont{
-                                        -webkit-animation: rotatingC 1s linear ;
-                                    animation-fill-mode: forwards;
+    /*STOP ANIMATION CLASS*/
+        .pauseanimation{
+            animation-play-state: paused;
+        }
 
-
-                                }
-
-                            /*STOP ANIMATION CLASS*/
-                                .pauseanimation{
-                                animation-play-state: paused;
-                                }
-
-                                .thecontent{
-                                    width: 200px;
-                                    height: 200px;
-                                    border-radius: 100%;
-                                    position: absolute;
-                                    top: -15%;
-                                    left: 100%;
-                                    transform: translate(-100%, -50%);
-                                }
-                                .thecontent img{
-                                    max-width: 200px;
-                                }
+    .thecontent{
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        position: absolute;
+        top: -15%;
+        left: 100%;
+        transform: translate(-100%, -50%);
+        }
+        .thecontent img{
+            max-width: 200px;
+        }
 
                             @-webkit-keyframes rotating {
                                 from{
@@ -302,15 +289,13 @@ section{
                                 }
                             }
 
-     /* End of rotating animation  */
+/* End of rotating animation  */
 
 /* Text animation  */
     .container{
-        /* position: relative;
-        top:50px;
-        left:100px; */
         text-align: center;
     }
+
     .animation{
         z-index: 13;
         display: inline-block;
@@ -337,10 +322,10 @@ section{
     }
 
     .second{   
-        
         font-weight: lighter;
         color: #E5CBA4; 
         font-weight:lighter;
+        font-size: 2rem;
         Z-index: 1;
         display: inline-block;
         animation : secondspan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
