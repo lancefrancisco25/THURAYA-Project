@@ -242,18 +242,18 @@
             var buttons = document.getElementsByClassName('triggerBut')
             for(var i = 0; i < buttons.length; i++){
                 console.log(buttons[i])
-                document.addEventListener('click', 	buttons[i].onclick = function(){
-                var e = document.querySelector('.rotatingCont'), a = document.querySelector('.thecontent')
-                e.classList.remove('pauseanimation')
-                a.classList.remove('pauseanimation')
-
-                e.classList.remove('spinCont')
-                a.classList.remove('outerSpinCont')
-                setTimeout(function(){
-                        e.classList.add('spinCont')
-                a.classList.add('outerSpinCont')
-                },1)
-            })
+            	buttons[i].onclick = function(){
+                    var e = document.querySelector('.rotatingCont'), a = document.querySelector('.thecontent')
+                    e.classList.remove('pauseanimation')
+                    a.classList.remove('pauseanimation')
+                    
+                    e.classList.remove('spinCont')
+                    a.classList.remove('outerSpinCont')
+                    setTimeout(function(){
+                            e.classList.add('spinCont')
+                    a.classList.add('outerSpinCont')
+                    },1)
+            }
             }
         </script>
 
